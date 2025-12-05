@@ -1,0 +1,193 @@
+{
+	"info": {
+		"_postman_id": "06649b31-b428-41ba-b2b2-cb12979280a0",
+		"name": "2 Boards",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "48648481",
+		"_collection_link": "https://sametgndz-4181787.postman.co/workspace/Taskpro2~86e03253-0a1c-4a63-a17d-f50fefac912b/collection/48648481-06649b31-b428-41ba-b2b2-cb12979280a0?action=share&source=collection_link&creator=48648481"
+	},
+	"item": [
+		{
+			"name": "Boards",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MGIzNTM1ZmFhZjlkMWVkMTA2ZDNkMSIsImlhdCI6MTc2Mjc1ODk1NSwiZXhwIjoxNzYyNzU5Nzk1fQ.bxcOAD2k5MibRFu7Am7vWiKmVqcUuQk3bQfoxdNyVCc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MGIzNTM1ZmFhZjlkMWVkMTA2ZDNkMSIsImlhdCI6MTc2Mjc1ODk1NSwiZXhwIjoxNzYyNzU5Nzk1fQ.bxcOAD2k5MibRFu7Am7vWiKmVqcUuQk3bQfoxdNyVCc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://task-pro-qa.b.goit.study/boards",
+					"protocol": "https",
+					"host": [
+						"task-pro-qa",
+						"b",
+						"goit",
+						"study"
+					],
+					"path": [
+						"boards"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add New",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MGIzNTM1ZmFhZjlkMWVkMTA2ZDNkMSIsImlhdCI6MTc2Mjc0OTU1NywiZXhwIjoxNzYyNzUwMzk3fQ.WIN99p_4nm2rP7lcgtPCZjwEmX0TeBx9h92LbpnclW8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"My project\",\r\n  \"icon\": \"star\",\r\n  \"background\": \"https://some-cloud-name.com/path/to/image/bg.jpg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://task-pro-qa.b.goit.study/boards",
+					"protocol": "https",
+					"host": [
+						"task-pro-qa",
+						"b",
+						"goit",
+						"study"
+					],
+					"path": [
+						"boards"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"My project\",\r\n  \"icon\": \"star\",\r\n  \"background\": \"https://some-cloud-name.com/path/to/image/bg.jpg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://task-pro-qa.b.goit.study/boards/{Boardid}",
+					"protocol": "https",
+					"host": [
+						"task-pro-qa",
+						"b",
+						"goit",
+						"study"
+					],
+					"path": [
+						"boards",
+						"{Boardid}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Background",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"background\": \"https://some-cloud-name.com/path/to/image/bg.jpg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://task-pro-qa.b.goit.study/boards/{Boardid}",
+					"protocol": "https",
+					"host": [
+						"task-pro-qa",
+						"b",
+						"goit",
+						"study"
+					],
+					"path": [
+						"boards",
+						"{Boardid}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://task-pro-qa.b.goit.study/boards/{Boardid}",
+					"protocol": "https",
+					"host": [
+						"task-pro-qa",
+						"b",
+						"goit",
+						"study"
+					],
+					"path": [
+						"boards",
+						"{Boardid}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

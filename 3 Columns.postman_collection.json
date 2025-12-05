@@ -1,0 +1,168 @@
+{
+	"info": {
+		"_postman_id": "22e9a541-5569-43aa-a436-9dc4e25df439",
+		"name": "3 Columns",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "48648481",
+		"_collection_link": "https://sametgndz-4181787.postman.co/workspace/Taskpro2~86e03253-0a1c-4a63-a17d-f50fefac912b/collection/48648481-22e9a541-5569-43aa-a436-9dc4e25df439?action=share&source=collection_link&creator=48648481"
+	},
+	"item": [
+		{
+			"name": "Add New",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MGIzNTM1ZmFhZjlkMWVkMTA2ZDNkMSIsImlhdCI6MTc2Mjc1ODk1NSwiZXhwIjoxNzYyNzU5Nzk1fQ.bxcOAD2k5MibRFu7Am7vWiKmVqcUuQk3bQfoxdNyVCc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"To do\",\r\n  \"board\": \"649885bb8cfd32ed13fd42d3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://task-pro-qa.b.goit.study/columns",
+					"protocol": "https",
+					"host": [
+						"task-pro-qa",
+						"b",
+						"goit",
+						"study"
+					],
+					"path": [
+						"columns"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Title",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Done\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://task-pro-qa.b.goit.study/columns/{columnid}",
+					"protocol": "https",
+					"host": [
+						"task-pro-qa",
+						"b",
+						"goit",
+						"study"
+					],
+					"path": [
+						"columns",
+						"{columnid}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://task-pro-qa.b.goit.study/columns/{columnid}",
+					"protocol": "https",
+					"host": [
+						"task-pro-qa",
+						"b",
+						"goit",
+						"study"
+					],
+					"path": [
+						"columns",
+						"{columnid}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add task",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Figure out what is swagger\",\r\n  \"description\": \"Я - умничка, сладкая булочка и прочитаю доки до сваггера))\",\r\n  \"deadline\": \"2023-07-21T20:57:15.000Z\",\r\n  \"priority\": \"high\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://task-pro-qa.b.goit.study/columns/{columnid}/tasks",
+					"protocol": "https",
+					"host": [
+						"task-pro-qa",
+						"b",
+						"goit",
+						"study"
+					],
+					"path": [
+						"columns",
+						"{columnid}",
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reorder",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"newOrder\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://task-pro-qa.b.goit.study/columns/{columnid}/order",
+					"protocol": "https",
+					"host": [
+						"task-pro-qa",
+						"b",
+						"goit",
+						"study"
+					],
+					"path": [
+						"columns",
+						"{columnid}",
+						"order"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

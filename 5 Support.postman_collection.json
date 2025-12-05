@@ -1,0 +1,36 @@
+{
+	"info": {
+		"_postman_id": "0ede00f2-9500-492a-9f3c-5ac4441295be",
+		"name": "5 Support",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "48648481",
+		"_collection_link": "https://sametgndz-4181787.postman.co/workspace/Taskpro2~86e03253-0a1c-4a63-a17d-f50fefac912b/collection/48648481-0ede00f2-9500-492a-9f3c-5ac4441295be?action=share&source=collection_link&creator=48648481"
+	},
+	"item": [
+		{
+			"name": "Sending",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"test@mail.com\",\r\n  \"message\": \"I'm using TaskPro for a while and it's gonna be great if I could upload my own background.\"\r\n}"
+				},
+				"url": {
+					"raw": "https://task-pro-qa.b.goit.study/support",
+					"protocol": "https",
+					"host": [
+						"task-pro-qa",
+						"b",
+						"goit",
+						"study"
+					],
+					"path": [
+						"support"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

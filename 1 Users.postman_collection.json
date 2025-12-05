@@ -1,0 +1,308 @@
+{
+	"info": {
+		"_postman_id": "818437f7-97cd-49eb-809c-f3fcf0fa71d1",
+		"name": "1 Users",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "48648481",
+		"_collection_link": "https://sametgndz-4181787.postman.co/workspace/Taskpro2~86e03253-0a1c-4a63-a17d-f50fefac912b/collection/48648481-818437f7-97cd-49eb-809c-f3fcf0fa71d1?action=share&source=collection_link&creator=48648481"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n\r\n\r\n{\r\n  \"name\": \"samet\",\r\n  \"email\": \"samet2002gunduz35@hotmail.com\",\r\n  \"password\": \"samet35S\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://task-pro-qa.b.goit.study/user/register",
+					"protocol": "https",
+					"host": [
+						"task-pro-qa",
+						"b",
+						"goit",
+						"study"
+					],
+					"path": [
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Log in",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"samet2002gunduz35@hotmail.com\",\r\n  \"password\": \"samet35S\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://task-pro-qa.b.goit.study/user/login",
+					"protocol": "https",
+					"host": [
+						"task-pro-qa",
+						"b",
+						"goit",
+						"study"
+					],
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Refresh",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"refreshToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MGIzNTM1ZmFhZjlkMWVkMTA2ZDNkMSIsImlhdCI6MTc2Mjc1ODkzOSwiZXhwIjoxNzYzOTY4NTM5fQ.ht9AYetnCztLQ2rsHALzYmMfeqEmPYT86jKOFSdaW70\"\r\n\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://task-pro-qa.b.goit.study/user/refresh",
+					"protocol": "https",
+					"host": [
+						"task-pro-qa",
+						"b",
+						"goit",
+						"study"
+					],
+					"path": [
+						"user",
+						"refresh"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Google",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://task-pro-qa.b.goit.study/user/google",
+					"protocol": "https",
+					"host": [
+						"task-pro-qa",
+						"b",
+						"goit",
+						"study"
+					],
+					"path": [
+						"user",
+						"google"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Callback",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://task-pro-qa.b.goit.study/user/google/callback",
+					"protocol": "https",
+					"host": [
+						"task-pro-qa",
+						"b",
+						"goit",
+						"study"
+					],
+					"path": [
+						"user",
+						"google",
+						"callback"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Me",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MGIzNTM1ZmFhZjlkMWVkMTA2ZDNkMSIsImlhdCI6MTc2Mjc1ODk1NSwiZXhwIjoxNzYyNzU5Nzk1fQ.bxcOAD2k5MibRFu7Am7vWiKmVqcUuQk3bQfoxdNyVCc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://task-pro-qa.b.goit.study/user/me",
+					"protocol": "https",
+					"host": [
+						"task-pro-qa",
+						"b",
+						"goit",
+						"study"
+					],
+					"path": [
+						"user",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Theme",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MGIzNTM1ZmFhZjlkMWVkMTA2ZDNkMSIsImlhdCI6MTc2Mjc1ODk1NSwiZXhwIjoxNzYyNzU5Nzk1fQ.bxcOAD2k5MibRFu7Am7vWiKmVqcUuQk3bQfoxdNyVCc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"theme\": \"violet\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://task-pro-qa.b.goit.study/user/theme",
+					"protocol": "https",
+					"host": [
+						"task-pro-qa",
+						"b",
+						"goit",
+						"study"
+					],
+					"path": [
+						"user",
+						"theme"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MGIzNTM1ZmFhZjlkMWVkMTA2ZDNkMSIsImlhdCI6MTc2Mjc1ODk1NSwiZXhwIjoxNzYyNzU5Nzk1fQ.bxcOAD2k5MibRFu7Am7vWiKmVqcUuQk3bQfoxdNyVCc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"avatar\": \"string\",\r\n  \"name\": \"samet\",\r\n  \"email\": \"samet2002gunduz35@hotmail.com\",\r\n  \"password\": \"samet35S\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://task-pro-qa.b.goit.study/user/update",
+					"protocol": "https",
+					"host": [
+						"task-pro-qa",
+						"b",
+						"goit",
+						"study"
+					],
+					"path": [
+						"user",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MGIzNTM1ZmFhZjlkMWVkMTA2ZDNkMSIsImlhdCI6MTc2Mjc1ODk1NSwiZXhwIjoxNzYyNzU5Nzk1fQ.bxcOAD2k5MibRFu7Am7vWiKmVqcUuQk3bQfoxdNyVCc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://task-pro-qa.b.goit.study/user/logout",
+					"protocol": "https",
+					"host": [
+						"task-pro-qa",
+						"b",
+						"goit",
+						"study"
+					],
+					"path": [
+						"user",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
